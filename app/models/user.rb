@@ -5,9 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :authentication_keys => [:loginid]
   belongs_to :admin
 
-  validates :employee_number, presence: true
   validates :name, presence: true
-  validates :Affiliation, presence: true
+  validates :affiliation, presence: true
 
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates :password, format: { with: VALID_PASSWORD_REGEX }
