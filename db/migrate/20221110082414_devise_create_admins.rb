@@ -6,6 +6,9 @@ class DeviseCreateAdmins < ActiveRecord::Migration[6.0]
       ## Database authenticatable
       t.string :loginid,            null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
+      t.string :employee_number,    null: false
+      t.string :name,               null: false
+      t.string :Affiliation,        null: false
 
       ## Recoverable
       t.string   :reset_password_token
