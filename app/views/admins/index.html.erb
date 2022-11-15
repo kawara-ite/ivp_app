@@ -1,0 +1,11 @@
+<h1>管理者一覧</h1>
+<% if admin_signed_in? && current_admin %>
+<%= link_to current_admin.id, edit_admin_registration_path %><%= current_admin.name %><%= current_admin.affiliation %>
+<% end %>
+<ul class="users">
+  <% @admins.each do |admin| %>
+    <li>
+      <%= admin.id %><%= admin.name %><%= admin.affiliation %>
+    </li>
+  <% end %>
+</ul>
