@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.17.1"
+lock "3.17.1"
 
 set :application, "ivp_app"
 set :repo_url, "git@github.com:kawara-ite/ivp_app.git"
